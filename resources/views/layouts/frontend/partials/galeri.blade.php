@@ -19,7 +19,7 @@
                         <div class="portfolio-hover">
                             <ul>
                                 <li>
-                                    <a class="image-popup" href="{{ asset('frontend/img/portfolio/portfolio5.jpg') }}"><span class="ti-camera"></span></a>
+                                    <a class="image-popup" href="{{ asset($galeri->image) }}"><span class="ti-camera"></span></a>
                                 </li>
                             </ul>
                             <h3>{{ $galeri->title }}</h3>

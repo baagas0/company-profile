@@ -110,6 +110,15 @@
 			<div class="card-body">
 				<h5 class="card-title">User Activity Logs</h5>
 				<ul class="report-list list-unstyled">
+					@if(count(Activity::orderBy('created_at', 'DESC')->where('causer_id', Auth::user()->id)->get()) < 1)
+						<li class="report-item">
+							<div class="report-icon"><i class="material-icons">error_outline</i></div>
+							<div class="report-text">User Logs Activity
+								<span>User Activity Is Null</span>
+							</div>
+							{{-- <div class="report-helper">45min ago</div> --}}
+						</li>
+					@endif
 					@foreach(Activity::orderBy('created_at', 'DESC')->where('causer_id', Auth::user()->id)->get() as $activity)
 						<?php 
 							$content = 'Not Slider';
