@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class User extends Authenticatable
 {
@@ -17,6 +18,17 @@ class User extends Authenticatable
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use LogsActivity;
+
+    protected static $logAttributes = ['name', 'name'];
+    protected static $recordEvents = ['created', 'updated', 'deleted'];
+
+    protected static $logName = 'User Logs Activity';
+
+    public function getDescriptionForEvent(string $eventName): string
+    {
+        return "{$eventName}";
+    }
 
     /**
      * The attributes that are mass assignable.

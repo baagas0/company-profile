@@ -4,8 +4,8 @@
 	<div class="col-12">
 		<div class="card">
 			<div class="card-body">
-				<h5 class="card-title">Complex Layout</h5>
-				<p>More complex layouts can also be created with the grid system.</p>
+				<h5 class="card-title">Slider Web</h5>
+				<p>Tanda <code>* (bintang)</code> di label input berarti field input wajib di isi dan akan error jika anda mengosonginya, dan sebaliknya jika tidak ada tanda <code>* (bintang)</code> maka field input tidak wajib di isi.</p>
 				<form action="{{ (empty($data)) ? route('slider.add.save') : route('slider.update.save', $data->id) }}" method="POST" enctype="multipart/form-data">
 					@csrf
 					<div class="form-row">

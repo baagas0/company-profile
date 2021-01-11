@@ -2,8 +2,8 @@
 @section('content')
 <div class="card">
 	<div class="card-body">
-		<h5 class="card-title">Complex Layout</h5>
-		<p>More complex layouts can also be created with the grid system.</p>
+		<h5 class="card-title">User Add Data</h5>
+		<p>Setelah menambah data. anda tidak dapat menghapus & mengubah data user. pengubahan hanya dapat dilakukan oleh user itu sendiri, dengan kata lain anda harus login dengan user yang bersangkutan untuk mengganti.</p>
 		<form action="{{ route('user.add.save') }}" method="POST">
 			@csrf
 			<div class="form-group">

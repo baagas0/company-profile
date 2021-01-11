@@ -84,7 +84,7 @@
             </div>
         </div>
         <div class="sidebar-footer">
-            <p class="copyright">Stacks ©</p>
+            <p class="copyright">Developer ©</p>
             <a href="#!">Privacy</a> &amp; <a href="#!">Terms</a>
         </div>
     </div>

@@ -13,6 +13,6 @@
 	@include('layouts.frontend.partials.galeri')
 	<!-- Galeri End -->
 	<!-- Testimonial area start -->
-	@include('layouts.frontend.partials.Testimoni')
+	@include('layouts.frontend.partials.testimoni')
 	<!-- Testimonial area end -->
 @endsection

@@ -4,8 +4,8 @@
 	<div class="col-12">
 		<div class="card">
 			<div class="card-body">
-				<h5 class="card-title">Complex Layout</h5>
-				<p>More complex layouts can also be created with the grid system.</p>
+				<h5 class="card-title">Add Testimoni Web</h5>
+				<p>Jika anda ingin menambahkan gambar properti untuk testimoni anda dapat saat mengupload galery.</p>
 				<form action="{{ (empty($data)) ? route('testimoni.add.save') : route('testimoni.update.save', $data->id) }}" method="POST" enctype="multipart/form-data">
 					@csrf
 					<div class="form-row">

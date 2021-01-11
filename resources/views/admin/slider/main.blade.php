@@ -4,8 +4,8 @@
 	<div class="col-12">
 		<div class="card">
 			<div class="card-body">
-				<h5 class="card-title">Responsive Tables</h5>
-				<p>Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a <code>.table</code> with <code>.table-responsive</code>.</p>
+				<h5 class="card-title">Slider Web</h5>
+				<p>Mohon jangan sembarangan mengubah, menambah, menghapus data <code>slug</code> field, perubahan yang terjadi dapat mengakibatkan error pada website. Resolve error hanya dapat di lakukan dengan cara drop semua data dan menggantinya dengan default data.</p>
 				<a href="{{ route('slider.add') }}" class="btn btn-primary mb-3">Add slider</a>
 				<div class="table-container">
 					<div class="table-responsive">
