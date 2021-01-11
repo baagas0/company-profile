@@ -36,6 +36,11 @@
                         </a>
                     </li>
 
+                    <li>
+                        <a href="{{ route('sosmed') }}" class="waves-effect waves-grey">
+                            <i class="material-icons">settings</i>Social Media
+                        </a>
+                    </li>
 
                     <li>
                         <a href="{{ route('slider') }}" class="waves-effect waves-grey">

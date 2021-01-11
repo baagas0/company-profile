@@ -20,11 +20,9 @@
                     </ul>
                     <div class="footer-social two">
                         <ul>
-                            <li><a href="https://www.facebook.com/devitems/?ref=bookmarks"><i class="ti-facebook"></i></a></li>
-                            <li><a href="https://twitter.com/devitemsllc"><i class="ti-twitter"></i></a></li>
-                            <li><a href="https://dribbble.com/devitemsllc"><i class="ti-dribbble"></i></a></li>
-                            <li><a href="https://www.pinterest.com/devitemsllc/"><i class="ti-pinterest"></i></a></li>
-                            <li><a href="https://www.linkedin.com/"><i class="ti-linkedin"></i></a></li>
+                            @foreach(getSetting('social-media') as $medsos)
+                            <li><a href="{{ $medsos->description }}"><i class="{{ $medsos->file }}"></i></a></li>
+                            @endforeach
                         </ul> 
                     </div>
                 </div>

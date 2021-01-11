@@ -46,9 +46,24 @@ class SettingSeeder extends Seeder
         $add->content = 'Logo Hitam';
         $add->save();
 
+        // =========================================||
+        $add = new Setting;
+        $add->slug = 'social-media';
+        $add->type = 'icon';
+        $add->file = 'ti-facebook';
+        $add->title = 'Facebook';
+        $add->content = 'https://www.facebook.com/CBKonstruksi';
+        $add->save();
 
+        $add = new Setting;
+        $add->slug = 'social-media';
+        $add->type = 'icon';
+        $add->file = ' ti-instagram';
+        $add->title = 'Facebook';
+        $add->content = 'https://instagram.com/cbkonstruksi';
+        $add->save();
         
-
+        // =========================================||
         $add = new Setting;
         $add->slug = 'alamat';
         $add->type = 'text';

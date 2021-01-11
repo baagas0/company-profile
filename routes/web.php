@@ -23,6 +23,7 @@ Route::group(['middleware' => 'auth:sanctum'], function() {
 	route::group(['prefix' => 'admin'], function(){
 		routeController('/', 'Admin\DashboardController');
 		routeController('user', 'Admin\UserController');
+		routeController('sosmed', 'Admin\SosmedController');
 		routeController('slider', 'Admin\SliderController');
 		routeController('service', 'Admin\ServiceController');
 		routeController('about', 'Admin\AboutController');
