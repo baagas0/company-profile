@@ -16,7 +16,7 @@
 							<h2>blog details</h2> 
 							<div class="banner-breadcrumb">
 								<ul>
-									<li><a href="index.html">home </a><i class="zmdi zmdi-arrow-right"></i></li>
+									<li><a href="/">home </a><i class="zmdi zmdi-arrow-right"></i></li>
 									<li>blog details</li>
 								</ul>
 							</div>

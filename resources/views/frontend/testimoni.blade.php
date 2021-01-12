@@ -15,7 +15,7 @@
 								<h2>Testimoni</h2> 
 								<div class="banner-breadcrumb">
 									<ul>
-										<li><a href="index.html">home </a><i class="zmdi zmdi-arrow-right"></i></li>
+										<li><a href="/">home </a><i class="zmdi zmdi-arrow-right"></i></li>
 										<li>testimoni page</li>
 									</ul>
 								</div>
