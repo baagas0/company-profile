@@ -21,7 +21,7 @@
                     <div class="footer-social two">
                         <ul>
                             @foreach(getSetting('social-media') as $medsos)
-                            <li><a href="{{ $medsos->content }}"><i class="{{ $medsos->file }}"></i></a></li>
+                            <li><a href="{{ $medsos->content }}" target="__blank"><i class="{{ $medsos->file }}"></i></a></li>
                             @endforeach
                         </ul> 
                     </div>
