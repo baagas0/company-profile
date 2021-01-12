@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>{{ Setting('title')->content }}</title>
-        <meta name="description" content="">
+        <meta name="description" content="Admin | {!! Setting('sejarah')->content !!}">
+        <meta name="keywords" content="{{ Setting('title')->content }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Favicon Icon -->
