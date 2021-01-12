@@ -10,25 +10,22 @@
 				<form action="{{ (empty($data)) ? route('about.add.save') : route('about.update.save', $data->id)}}" method="POST" enctype="multipart/form-data">
 					@csrf
 					<div class="form-row">
-						<div class="form-group col-md-3">
-							<label for="inputEmail4" class="active">Image</label>
-							<input type="file" class="form-control" id="" placeholder="File Slider" name="file">
+						<div class="form-group col-md-4">
+							<label for="inputEmail4" class="active">Icon *</label>
+							<input type="text" class="form-control" id="" placeholder="ti-facebook" name="file">
+							<p>Find icon like <code>ti-facebook</code> on <a href="https://material.io/resources/icons/" target="__blank"><code>Here</code></a>.</p>
 						</div>
-						<div class="form-group col-md-3">
+						<div class="form-group col-md-4">
 							<label for="inputPassword4">Slug *</label>
 							<input type="text" class="form-control" id="slug" placeholder="Slug" name="slug" value="{{ (empty($data)) ? '' : $data->slug }}">
 						</div>
-						<div class="form-group col-md-3">
+						<div class="form-group col-md-4">
 							<label for="inputPassword4">Title *</label>
 							<input type="text" class="form-control" id="title" placeholder="Title" name="title" value="{{ (empty($data)) ? '' : $data->title }}">
 						</div>
-						<div class="form-group col-md-3">
-							<label for="inputPassword4">Value</label>
-							<input type="number" class="form-control" id="value" placeholder="Title" name="value" value="{{ (empty($data)) ? '' : $data->value }}">
-						</div>
 					</div>
 
-					<label>Content Service *</label>
+					<label>Media Social Link *</label>
 					<div class="form-group">
 						<textarea class="form-control" id="content" name="content" rows="10">{{ (empty($data)) ? '' : $data->content }}</textarea>
 					</div>

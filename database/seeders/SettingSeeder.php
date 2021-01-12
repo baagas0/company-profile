@@ -58,7 +58,7 @@ class SettingSeeder extends Seeder
         $add = new Setting;
         $add->slug = 'social-media';
         $add->type = 'icon';
-        $add->file = ' ti-instagram';
+        $add->file = 'ti-instagram';
         $add->title = 'Facebook';
         $add->content = 'https://instagram.com/cbkonstruksi';
         $add->save();

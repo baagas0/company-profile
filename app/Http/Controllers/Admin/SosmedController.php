@@ -25,16 +25,11 @@ class SosmedController extends Controller
 
     public function postAddSave(Request $request)
     {
-    	$file = $request->file('file');
-
-        $file_name = 'service'.time().$file->getClientOriginalName();
-        $path = '/frontend/img/icon/';
-        $file->move(public_path().$path, $file_name);
 
     	$add = new Setting;
-    	$add->slug = 'service';
+    	$add->slug = 'social-media';
     	$add->type = 'image';
-    	$add->file = $path.$file_name;
+    	$add->file = $request->file;
     	$add->title = $request->title;
     	$add->content = $request->content;
     	$save = $add->save();
@@ -55,19 +50,10 @@ class SosmedController extends Controller
 
     public function postUpdateSave(Request $request, $id)
     {
-        $add = Setting::findOrFail($id);
-
-        $file = $request->file('file');
-
-        if ($file) {
-            $file_name = 'service'.time().$file->getClientOriginalName();
-            $path = '/frontend/img/icon/';
-            $file->move(public_path().$path, $file_name);
-            $add->file = $path.$file_name;
-        }
-
-        $add->slug = 'service';
+        $add = new Setting;
+        $add->slug = 'social-media';
         $add->type = 'image';
+        $add->file = $request->file;
         $add->title = $request->title;
         $add->content = $request->content;
         $save = $add->save();

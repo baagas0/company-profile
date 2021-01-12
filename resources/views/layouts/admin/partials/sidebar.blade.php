@@ -19,7 +19,18 @@
                     <li><a href="{{ route('user.add') }}" class="waves-effect waves-grey"><i class="material-icons">inbox</i>User Add</a></li>
                     
                     <li class="divider"></li>
-                    <li><a href="#" class="waves-effect waves-grey"><i class="material-icons">exit_to_app</i>Sign Out</a></li>
+
+                    <li>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                            this.closest('form').submit();" class="waves-effect waves-grey"><i class="material-icons">exit_to_app</i>Sign Out</a>
+                            
+                        </form>
+
+                    </li>
                 </ul>
             </div>
             <div class="sidebar-accordion-menu">
