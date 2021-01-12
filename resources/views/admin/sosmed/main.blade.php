@@ -18,7 +18,7 @@
 									<th scope="col">Image</th>
 									<th scope="col">Title</th>
 									<th scope="col">Content</th>
-									<th scope="col">Value</th>
+									{{-- <th scope="col">Value</th> --}}
 									<th scope="col">Act.</th>
 								</tr>
 							</thead>
@@ -39,7 +39,7 @@
 										</td>
 										<td>{{ $row->title }}</td>
 										<td>{!! $row->content !!}</td>
-										<td>{{ $row->value }}</td>
+										{{-- <td>{{ $row->value }}</td> --}}
 										<td>
 											<a href="{{ route('about.update', $row->id) }}">
 												<span class="material-icons">
