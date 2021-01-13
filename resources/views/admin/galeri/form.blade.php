@@ -24,6 +24,10 @@
 								<div class="input-group-prepend">
 									<img src="{{ asset($data->image) }}" class="img-responsive" style="height: 60px;width: auto;border: solid 1px;border-radius: 0px 8px 0px 0px">
 								</div>
+								@else
+								<div class="input-group-prepend">
+									<button class="input-group-text material-icons" id="addImage">add</button>
+								</div>
 								@endif
 							</div>
 							@if(!empty($data))
