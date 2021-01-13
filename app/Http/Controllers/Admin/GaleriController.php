@@ -33,25 +33,24 @@ class GaleriController extends Controller
 
     public function postAddSave(Request $request)
     {
-    	$gambar = $request->file('image');
+    	$gambars = $request->file('image');
 
-        $gambar_name = 'galeri'.time().$gambar->getClientOriginalName();
-        $path = '/frontend/img/galeri/';
-        $gambar->move(public_path().$path, $gambar_name);
+        foreach ($gambars as $gambar) {
 
-        $add = new Galery;
-        $add->image = $path.$gambar_name;
-        $add->testimoni_id = $request->testimoni_id;
-        $add->title = $request->title;
-        $add->description = $request->description;
-        $save = $add->save();
+            $gambar_name = 'galeri'.time().$gambar->getClientOriginalName();
+            $path = '/frontend/img/galeri/';
+            $gambar->move(public_path().$path, $gambar_name);
 
-        if ($save) {
-        	Session::flash('success','Data Galeri Berhasil Di Simpan');
-        	return redirect()->route('galeri');
-        }else {
-        	return 500;
+            $add = new Galery;
+            $add->image = $path.$gambar_name;
+            $add->testimoni_id = $request->testimoni_id;
+            $add->title = $request->title;
+            $add->description = $request->description;
+            $save = $add->save();
+
         }
+        Session::flash('success','Data Galeri Berhasil Di Simpan');
+        return redirect()->route('galeri');
     }
 
     public function getUpdate($id)

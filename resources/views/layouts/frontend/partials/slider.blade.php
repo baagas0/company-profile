@@ -4,7 +4,7 @@
     $sliders = Slider::where('is_active', 1)->get();
     ?>
     @foreach($sliders as $slider)
-    <div class="single-slide height-100vh" style="background-image: url('{{ asset($slider->image) }}');">
+    <div class="single-slide height-100vh active" style="background-image: url('{{ asset($slider->image) }}');">
         <div class="slider-content">
             <div class="container">
                 <div class="text-content-wrapper">

@@ -269,6 +269,8 @@
                 toastr.error('{{ $message }}')
                 @endif
 
+                
+
                 $('#search').on('keyup', function() {
                     var search = $(this).val();
                     var tokenCsrf = $('#tokenCsrf').val();

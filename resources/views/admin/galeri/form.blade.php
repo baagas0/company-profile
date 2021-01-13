@@ -12,10 +12,23 @@
 				<p>Tanda <code>* (bintang)</code> di label input berarti field input wajib di isi dan akan error jika anda mengosonginya, dan sebaliknya jika tidak ada tanda <code>* (bintang)</code> maka field input tidak wajib di isi.</p>
 				<form action="{{ (empty($data)) ? route('galeri.add.save') : route('galeri.update.save', $data->id) }}" method="POST" enctype="multipart/form-data">
 					@csrf
-					<div class="form-row">
-						<div class="form-group col-md-4">
-							<label for="inputEmail4" class="active">Image Slider *</label>
-							<input type="file" class="form-control" id="" placeholder="Image Slider" name="image">
+					<div class="form-row" id="form-row-input">
+						<div class="form-group col-md-4" id="imageRow">
+							<div class="input-group">
+								<label for="validationCustomUsername" class="active">Image Slider {{ (empty($data) ? '*' : '') }}</label>
+								<input type="file" class="form-control"placeholder="Image Slider" name="{{ (empty($data) ? 'image[]' : 'image') }}" aria-describedby="inputGroupPrepend" required>
+								<div class="invalid-feedback">
+									Please choose a image.
+								</div>
+								@if(!empty($data))
+								<div class="input-group-prepend">
+									<img src="{{ asset($data->image) }}" class="img-responsive" style="height: 60px;width: auto;border: solid 1px;border-radius: 0px 8px 0px 0px">
+								</div>
+								@endif
+							</div>
+							@if(!empty($data))
+								<small>Biarkan kosong jika tidak ingin mengganti.</small>
+							@endif
 						</div>
 						<div class="form-group col-md-4">
 							{{-- <label for="testimoni">Testimoni</label> --}}
@@ -57,6 +70,10 @@
 <script>
 	$(document).ready(function() {
 		"use strict";
+
+		$('#addImage').on('click' , function() {
+			$('#form-row-input').append('<div class="form-group col-md-4" id="imageRow"><div class="input-group"><label for="validationCustomUsername" class="active">Image Slider *</label><input type="file" class="form-control"placeholder="Image Slider" name="image[]" aria-describedby="inputGroupPrepend" required><div class="invalid-feedback">Please choose a username.</div><div class="input-group-prepend"></div></div></div>');
+		});
 
 		$('select').select2();
 	});

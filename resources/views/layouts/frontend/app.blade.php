@@ -62,6 +62,8 @@
         <script src="{{ asset('frontend/js/plugins.js') }}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsT3oo7hsDHBypdmwtfy_dkhWAKb2fb8I "></script> 
         <script type="text/javascript">
+            
+
             google.maps.event.addDomListener(window, 'load', init);
             function init() {
                 var mapOptions = {

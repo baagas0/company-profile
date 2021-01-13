@@ -45,7 +45,7 @@
 								<div class="portfolio_effect single-portfolio-item">
 									<img class="img-responsive" src="{{ asset($galeri->image) }}" alt="galeri">
 									<div class="portfolio-detail">
-										<a class="image-popup" href="img/project/project1b.jpg">
+										<a class="image-popup" href="{{ asset($galeri->image) }}">
 											<span class="ti-fullscreen"></span>
 										</a>
 										<div class="portfolio-detail-info">
